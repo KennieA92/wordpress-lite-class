@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <v-snackbar v-model="snackbar" top>
             New Post Added
         </v-snackbar>

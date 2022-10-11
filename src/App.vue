@@ -19,9 +19,17 @@
           <router-link to="editPost">
             <v-list-item prepend-icon="mdi-pencil-outline" title="Edit Posts" value="shared"></v-list-item>
           </router-link>
-          <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+          <router-link to="login">
+            <v-list-item prepend-icon="mdi-login" title="Login" value="shared"></v-list-item>
+          </router-link>
+          <router-link to="navguardviewtest">
+            <v-list-item prepend-icon="mdi-star" title="NavGuard" value="shared"></v-list-item>
+          </router-link>
+          <v-list-item prepend-icon="mdi-star" title="Logout" value="starred" v-if="isLoggedIn"></v-list-item>
         </v-list>
       </v-navigation-drawer>
+
+
 
       <v-main>
         <Suspense>
@@ -32,15 +40,8 @@
   </v-app>
 </template>
 
-<script>
+<script setup>
 
-export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
-}
 </script>
 
 <style lang="scss">
